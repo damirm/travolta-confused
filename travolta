@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+convert $1 \
+    -coalesce \
+    -gravity South \
+    -geometry +0+0 null: $(dirname $(realpath "$0"))/travolta-transparent.gif \
+    -layers composite \
+    -layers optimize $1.gif
